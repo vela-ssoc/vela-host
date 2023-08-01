@@ -50,7 +50,6 @@ func (h *Host) Update() {
 
 func (h *Host) Index(L *lua.LState, key string) lua.LValue {
 	h.Update()
-
 	switch key {
 	case "id":
 		return lua.S2L(h.id)
